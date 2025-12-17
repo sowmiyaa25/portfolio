@@ -5,3 +5,4 @@ CREATE TABLE contact_messages (
     message TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
