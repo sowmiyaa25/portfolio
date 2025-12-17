@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sowmiyaa Kamsini | Aeronautical Engineer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ABOUT ME -->
+    <section id="about">
+        <h1>Sowmiyaa Kamsini</h1>
+        <h3>Aeronautical Engineering Student | Space Technology Enthusiast</h3>
+        <p>
+            I am a III-year Aeronautical Engineering student with a strong interest in space technology and aerospace systems. 
+            My goal is to build practical skills and contribute to real-world aerospace and space projects through research and learning.
+            I am an NCC cadet and value discipline, clarity, and continuous improvement.
+        </p>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+        <h2>Education</h2>
+        <p>KIT-Kalaignarkarunanidhi Institute of Technology</p>
+        <p>III Year, B.E Aeronautical Engineering</p>
+        <p>Focus: Conceptual understanding and research in aeronautics, space systems, and autonomous technologies.</p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div>
+                <h3>Technical / Programming</h3>
+                <ul>
+                    <li>Java</li>
+                    <li>HTML / CSS</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Space & Aeronautics</h3>
+                <ul>
+                    <li>Conceptual understanding of flight dynamics and spacecraft systems</li>
+                    <li>Basic SolidWorks modeling for aerospace components</li>
+                    <li>Research & analysis in autonomous systems for space applications</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Discipline & teamwork (NCC)</li>
+                    <li>Leadership & communication (MOC experience)</li>
+                    <li>Curiosity-driven problem solving</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>AI-enabled Autonomous Spacecraft Repair Bot</h3>
+            <ul>
+                <li>Conceptual design of a robot capable of navigating spacecraft exteriors for maintenance.</li>
+                <li>Focus on adaptive locomotion and AI-based decision-making in unknown environments.</li>
+                <li>Research stage: Locomotion algorithms and space environment constraints.</li>
+            </ul>
+        </div>
+        <div class="project">
+            <h3>Seaplane Comparative Study</h3>
+            <ul>
+                <li>Research comparing different seaplane designs for efficiency and stability.</li>
+                <li>Conceptual modeling using aerodynamic principles.</li>
+                <li>Theoretical simulations and performance predictions.</li>
+            </ul>
+        </div>
+        <div class="project">
+            <h3>Rocket Nozzle Design & Thrust Analysis</h3>
+            <ul>
+                <li>SolidWorks conceptual modeling of a rocket nozzle for vacuum and atmospheric thrust.</li>
+                <li>Researching propellant types, combustion properties, and nozzle efficiency.</li>
+                <li>Focus on real-world application of propulsion principles.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements">
+        <h2>Achievements</h2>
+        <ul>
+            <li>NCC Cadet – Discipline, teamwork, and leadership training</li>
+            <li>YASSC 2025 – Space science congress participant</li>
+            <li>IAAC 2025 – Preparing for international astronomy competition</li>
+            <li>Essay competitions on defence, space, and policy topics</li>
+        </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: sowmiyaa.kamsini@example.com</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/sowmiyaa-kamsini" target="_blank">linkedin.com/in/sowmiyaa-kamsini</a></p>
+        <p>Open to internships, research projects, and mentorship in aerospace, space, and defence domains.</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
