@@ -1,187 +1,210 @@
-/* ===============================
-   GLOBAL RESET & BASE STYLES
-================================ */
+/* -------------------- */
+/* RESET & BASE SETUP */
+/* -------------------- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: #f4f7fb;
-    color: #1a1a1a;
-    line-height: 1.8;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #050814;
+  color: #e5e7eb;
+  line-height: 1.8;
 }
 
-/* ===============================
-   NAVBAR
-================================ */
+/* -------------------- */
+/* NAVBAR */
+/* -------------------- */
 nav {
-    background-color: #0b3d91;
-    padding: 16px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(5, 8, 20, 0.9);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 18px;
 }
 
 nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+  color: #60a5fa;
 }
 
-/* ===============================
-   HERO SECTION (SPACE THEME)
-================================ */
+/* -------------------- */
+/* HERO SECTION */
+/* -------------------- */
 .hero {
-    height: 90vh;
-    background: radial-gradient(circle at top, #0b3d91, #020617);
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Stars animation */
-.hero::before {
-    content: "";
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    background-image: 
-        radial-gradient(2px 2px at 20% 30%, white, transparent),
-        radial-gradient(1px 1px at 80% 40%, white, transparent),
-        radial-gradient(1.5px 1.5px at 50% 70%, white, transparent),
-        radial-gradient(1px 1px at 10% 80%, white, transparent);
-    animation: starsMove 60s linear infinite;
-}
-
-@keyframes starsMove {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-500px);
-    }
+  height: 100vh;
+  background: radial-gradient(circle at top, #0b1c3d, #050814);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-content {
-    position: relative;
-    max-width: 900px;
-    padding: 20px;
+  z-index: 2;
+  max-width: 800px;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 15px;
+  font-size: 3rem;
+  letter-spacing: 1px;
 }
 
 .hero h3 {
-    font-size: 1.4rem;
-    font-weight: 400;
-    opacity: 0.9;
-    margin-bottom: 25px;
+  font-weight: 400;
+  margin: 15px 0;
+  color: #9ca3af;
 }
 
 .hero p {
-    font-size: 1.05rem;
-    max-width: 700px;
-    margin: auto;
-    opacity: 0.85;
+  font-size: 1.05rem;
+  color: #d1d5db;
 }
 
-/* ===============================
-   SECTION LAYOUT
-================================ */
+/* -------------------- */
+/* STAR ANIMATION */
+/* -------------------- */
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.stars::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: moveStars 120s linear infinite;
+  opacity: 0.25;
+}
+
+@keyframes moveStars {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-1000px);
+  }
+}
+
+/* -------------------- */
+/* SECTION STYLE */
+/* -------------------- */
 section {
-    max-width: 900px;
-    margin: auto;
-    padding: 80px 20px;
+  max-width: 900px;
+  margin: auto;
+  padding: 120px 20px 80px;
 }
 
-section h2 {
-    font-size: 2rem;
-    margin-bottom: 25px;
-    color: #0b3d91;
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #93c5fd;
 }
 
-/* ===============================
-   ABOUT PARAGRAPH FIX
-================================ */
-#about p {
-    max-width: 700px;
-    margin-top: 20px;
-    font-size: 1.05rem;
-    text-align: justify;
-    line-height: 1.9;
+/* -------------------- */
+/* TEXT ALIGNMENT FIX */
+/* -------------------- */
+p {
+  text-align: justify;
+  margin-bottom: 15px;
 }
 
-/* ===============================
-   SKILLS
-================================ */
+/* -------------------- */
+/* SKILLS */
+/* -------------------- */
 .skills-container {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
 }
 
 .skills-container div {
-    flex: 1;
-    min-width: 220px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
 }
 
 .skills-container h3 {
-    margin-bottom: 10px;
-    color: #0b3d91;
+  margin-bottom: 10px;
+  color: #60a5fa;
 }
 
-.skills-container ul {
-    list-style-type: square;
-    padding-left: 20px;
-}
-
-/* ===============================
-   PROJECTS
-================================ */
+/* -------------------- */
+/* PROJECTS */
+/* -------------------- */
 .project {
-    background-color: #ffffff;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 14px;
+  margin-bottom: 30px;
 }
 
-.project h3 {
-    margin-bottom: 10px;
-    color: #0b3d91;
+/* -------------------- */
+/* SCROLL ANIMATION */
+/* -------------------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
 }
 
-/* ===============================
-   CONTACT
-================================ */
-#contact a {
-    color: #0b3d91;
-    font-weight: 600;
-    text-decoration: none;
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-#contact a:hover {
-    text-decoration: underline;
+/* -------------------- */
+/* CONTACT */
+/* -------------------- */
+a {
+  color: #60a5fa;
 }
 
+/* -------------------- */
+/* MOBILE RESPONSIVE */
+/* -------------------- */
+@media (max-width: 768px) {
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  section {
+    padding: 100px 15px 60px;
+  }
+}
