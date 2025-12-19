@@ -21,7 +21,7 @@ body {
   background: rgba(2, 6, 23, 0.9);
   display: flex;
   align-items: center;
-  padding:0 16px;
+  padding:16px;
   z-index: 1000;
 }
 .nav-left {
@@ -135,5 +135,6 @@ ul {
     font-size: 1.4rem;
   }
 }
+
 
 
