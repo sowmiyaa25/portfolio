@@ -2,163 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>Sowmiyaa | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sereniventure | Portfolio</title>
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
-<!-- Header -->
-  <header class="header">
-    <div class="logo">SERENIVENTURE</div>
 
-    <!-- Hamburger -->
-    <div class="hamburger" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <button class="hamburger" id="hamburger">
+      ☰
+    </button>
+    <h1 class="brand">Sowmiyaa</h1>
   </header>
-    <!-- Mobile Menu -->
-  <nav class="mobile-menu" id="mobileMenu">
-    <a href="#about" onclick="closeMenu()">About Me</a>
-    <a href="#education" onclick="closeMenu()">Education</a>
-    <a href="#skills" onclick="closeMenu()">Skills</a>
-    <a href="#projects" onclick="closeMenu()">Projects</a>
-    <a href="#writing" onclick="closeMenu()">Writing</a>
-    <a href="#contact" onclick="closeMenu()">Contact</a>
+
+  <!-- SIDEBAR MENU -->
+  <nav class="sidebar" id="sidebar">
+    <a href="#about" class="nav-link active">About Me</a>
+    <a href="#education" class="nav-link">Education</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#writing" class="nav-link">Technical Writing</a>
+    <a href="#contact" class="nav-link">Contact</a>
   </nav>
-    
-    <!-- ABOUT ME -->
-    
-     <section class="hero">
-       <div class="hero-content">   
-        <h3>Aeronautical Engineering Student <h3>
-       </h3>Exploring Space, Systems & Thought</h3>
-        <p>
-            I am an Aeronautical Engineering student with a growing passion for technology and innovation. While my core background is in aerospace, I am also building strong foundations in programming (Java, HTML, SQL, GitHub) to expand my problem-solving abilities beyond traditional engineering.
-            My interest lies in applying analytical thinking and structured coding skills to complex systems, whether in aviation, software, or interdisciplinary fields. I believe that technology and aerospace are deeply interconnected, and I aim to bridge this gap by combining my engineering knowledge 
-            with IT expertise. I thrive in environments that challenge me to adapt, learn quickly, and contribute meaningfully to impactful projects. Whether it is working on aircraft systems or coding solutions, my focus remains on continuous learning and delivering value.
-        </p>
-        </section>
-    </div>
-   
 
-    <!-- EDUCATION -->
-    <section id="education" class ="fade-in">
-        <h2>Education</h2>
-        <p>KIT-Kalaignarkarunanidhi Institute of Technology</p>
-        <p>B.E Aeronautical Engineering</p>
-        <p>Focus: Hands-on Aerospace Expertise</p>
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>
+        I am an Aeronautical Engineering student with a strong interest in space
+        systems, technical documentation, and scientific communication.
+        Alongside my core aerospace background, I build structured and readable
+        technical content for learners, engineers, and non-specialist audiences.
+      </p>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class = "fade-in">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <div>
-                <h3>Technical Skills</h3>
-                <ul>
-                    <li>Java</li>
-                    <li>HTML / CSS</li>
-                    <li>SQL</li>
-                    <li>SolidWorks</li>
-                    <li>CATIA V5</li>
-                    <li>Blogging</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Core Skills</h3>
-                <ul>
-                    <li>Conceptual understanding of flight dynamics and spacecraft systems</li>
-                    <li>Basic SolidWorks modeling for aerospace components</li>
-                    <li>Research & analysis in autonomous systems for space applications</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Soft Skills</h3>
-                <ul>
-                    <li>Discipline & teamwork (NCC)</li>
-                    <li>Leadership & communication</li>
-                    <li>Curiosity-driven problem solving</li>
-                </ul>
-            </div>
-        </div>
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <p>
+        Bachelor’s Degree in Aeronautical Engineering  
+        <br/>Focused on propulsion, space systems, and engineering fundamentals.
+      </p>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class = "fade-in">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>AI-enabled Autonomous Spacecraft Repair Bot</h3>
-            <ul>
-                <li>Conceptual design of a robot capable of navigating spacecraft exteriors for maintenance.</li>
-                <li>Focus on adaptive locomotion and AI-based decision-making in unknown environments.</li>
-                <li>Research stage: Locomotion algorithms and space environment constraints.</li>
-            </ul>
-        </div>
-        <div class="project">
-            <h3>Seaplane Comparative Study</h3>
-            <ul>
-                <li>Research comparing different seaplane designs for efficiency and stability.</li>
-                <li>Conceptual modeling using aerodynamic principles.</li>
-                <li>Theoretical simulations and performance predictions.</li>
-            </ul>
-        </div>
-        <div class="project">
-            <h3>Rocket Nozzle Design & Thrust Analysis</h3>
-            <ul>
-                <li>SolidWorks conceptual modeling of a rocket nozzle for vacuum and atmospheric thrust.</li>
-                <li>Researching propellant types, combustion properties, and nozzle efficiency.</li>
-                <li>Focus on real-world application of propulsion principles.</li>
-            </ul>
-        </div>
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>Technical Writing & Documentation</li>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Java & SQL (Basics)</li>
+        <li>GitHub & Version Control</li>
+      </ul>
     </section>
 
-    <!-- Writing -->
-  <section id="writing" class="fade-in">
-    <h2>Technical Writing</h2>
-
-    <ul class="interest-list">
-      <li>Space science & space systems documentation</li>
-      <li>Aerospace concepts explained for non-specialists</li>
-      <li>Earth science & planetary science content</li>
-      <li>Oceanography & environmental science writing</li>
-      <li>Science communication & educational articles</li>
-      <li>Research summaries and concept explanations</li>
-      <li>Philosophy of science & interdisciplinary studies</li>
-      <li>Travel, culture, and scientific exploration narratives</li>
-    </ul>
-  </section>
-   
-      
-
-
-    <!-- CONTACT -->
-    <section id="contact" class = "fade-in">
-        <h2>Contact</h2>
-        <p>Email: sowmiyaasowmiyaa1@gmail.com</p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/sowmiyaa-kamsini" target="_blank">linkedin.com/in/sowmiyaa-kamsini</a></p>
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <ul>
+        <li>Personal Portfolio Website</li>
+        <li>Blog Website (Technical & Science Topics)</li>
+        <li>Concept Documentation – Space Systems</li>
+      </ul>
     </section>
 
-    <script src="script.js">
-        function toggleMenu() {
-      document.getElementById("mobileMenu").classList.toggle("active");
-    }
+    <section id="writing" class="section">
+      <h2>Technical Writing</h2>
+      <p><strong>Areas of Interest:</strong></p>
+      <ul>
+        <li>Space Science & Astronomy</li>
+        <li>Aerospace & Rocket Propulsion</li>
+        <li>Earth Science & Oceanology</li>
+        <li>Scientific Concepts for Beginners</li>
+        <li>Research Summaries & Reports</li>
+      </ul>
+    </section>
 
-    function closeMenu() {
-      document.getElementById("mobileMenu").classList.remove("active");
-    }
-    </script>
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Email: sowmiyaa@example.com</p>
+      <p>GitHub: github.com/sowmiyaa25</p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
 
