@@ -1,23 +1,36 @@
-// Smooth scrolling
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e){
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+const hamburger = document.getElementById("hamburger");
+const sidebar = document.getElementById("sidebar");
+const links = document.querySelectorAll(".nav-link");
+const sections = document.querySelectorAll(".section");
+
+hamburger.addEventListener("click", () => {
+  sidebar.classList.toggle("open");
 });
 
-// Scroll fade-in animation
-const elements = document.querySelectorAll('.fade-in');
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    sidebar.classList.remove("open");
 
+    links.forEach(l => l.classList.remove("active"));
+    link.classList.add("active");
+  });
+});
+
+/* Scroll animation */
 const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        }
-    });
-}, { threshold: 0.2 });
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
 
-elements.forEach(el => observer.observe(el));
+      links.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").substring(1) === entry.target.id) {
+          link.classList.add("active");
+        }
+      });
+    }
+  });
+}, { threshold: 0.3 });
+
+sections.forEach(section => observer.observe(section));
 
