@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sowmiyaa Kamsini | Aeronautical Engineer</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sereniventure | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    
+<!-- Header -->
+  <header class="header">
+    <div class="logo">SERENIVENTURE</div>
 
-    <!-- NAVBAR -->
-   <nav class="navbar">
-  <h1 class="logo">Sowmiyaa Kamsini</h1>
-
-  <div class="menu-toggle" id="menu-toggle">
-    ☰
-  </div>
-
-  <ul class="nav-links" id="nav-links">
-    <li><a href="#about">About Me</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#writing">Writing</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
- 
-
+    <!-- Hamburger -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+    <!-- Mobile Menu -->
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="closeMenu()">About Me</a>
+    <a href="#education" onclick="closeMenu()">Education</a>
+    <a href="#skills" onclick="closeMenu()">Skills</a>
+    <a href="#projects" onclick="closeMenu()">Projects</a>
+    <a href="#writing" onclick="closeMenu()">Writing</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+  </nav>
     
     <!-- ABOUT ME -->
     
@@ -114,53 +114,24 @@
             </ul>
         </div>
     </section>
-    <section id="technical-writing" class = "fade-in">
-  <h2>Technical Writing & Documentation</h2>
 
-  <div class="project">
-    <h3>Concept Documentation – Autonomous Spacecraft Repair Bot</h3>
-    <ul>
-      <li>Created structured documentation explaining system objectives, working principles, and design constraints.</li>
-      <li>Focused on clarity for readers with non-specialist backgrounds.</li>
-      <li>Converted complex space robotics concepts into readable technical explanations.</li>
+    <!-- Writing -->
+  <section id="writing" class="fade-in">
+    <h2>Technical Writing</h2>
+
+    <ul class="interest-list">
+      <li>Space science & space systems documentation</li>
+      <li>Aerospace concepts explained for non-specialists</li>
+      <li>Earth science & planetary science content</li>
+      <li>Oceanography & environmental science writing</li>
+      <li>Science communication & educational articles</li>
+      <li>Research summaries and concept explanations</li>
+      <li>Philosophy of science & interdisciplinary studies</li>
+      <li>Travel, culture, and scientific exploration narratives</li>
     </ul>
-  </div>
-
-  <div class="project">
-    <h3>Technical Explanation – Rocket Nozzle & Thrust Principles</h3>
-    <ul>
-      <li>Wrote simplified explanations of propulsion concepts including thrust, expansion ratio, and vacuum efficiency.</li>
-      <li>Organized content using step-by-step logic and diagrams.</li>
-      <li>Targeted for students and early learners in aerospace engineering.</li>
-    </ul>
-  </div>
-
-  <div class="project">
-    <h3>Research Summaries & Reports</h3>
-    <ul>
-      <li>Prepared concise research summaries from technical papers related to space systems.</li>
-      <li>Focused on extracting key ideas, assumptions, and conclusions.</li>
-      <li>Ensured structured formatting, headings, and readability.</li>
-    </ul>
-  </div>
-</section>
-
-    <section id="writing" class = "fade-in">
-    <h2>Writing & Knowledge Exploration</h2>
-    <p>
-        Alongside my technical education, I actively explore and write about a wide range of subjects including
-        space science, earth systems, oceanology, history, literature, travel, philosophy, and reflections on life.
-    </p>
-    <p>
-        My interest lies in understanding how science, nature, and human thought connect, and in communicating
-        complex ideas in a clear, meaningful, and structured manner.
-    </p>
-    <p>
-        This interdisciplinary curiosity supports my long-term goal of contributing not only as an engineer,
-        but also as a technical writer and knowledge communicator in science and technology domains.
-    </p>
-</section>
-
+  </section>
+   
+      
 
 
     <!-- CONTACT -->
@@ -170,9 +141,18 @@
         <p>LinkedIn: <a href="https://linkedin.com/in/sowmiyaa-kamsini" target="_blank">linkedin.com/in/sowmiyaa-kamsini</a></p>
     </section>
 
-    <script src="script.js"></script>
+    <script src="script.js">
+        function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("active");
+    }
+
+    function closeMenu() {
+      document.getElementById("mobileMenu").classList.remove("active");
+    }
+    </script>
 </body>
 </html>
+
 
 
 
