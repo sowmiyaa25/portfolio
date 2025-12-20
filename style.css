@@ -157,7 +157,8 @@ main {
 }
 
 h2 {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
+  margin-bottom: 12px;
   color: #e0f2fe;
   font-size: 1.8rem;
   text-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
@@ -214,6 +215,7 @@ ul {
     font-size: 1.4rem;
   }
 }
+
 
 
 
