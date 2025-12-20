@@ -19,7 +19,10 @@ body {
   width: 100%;
   height: 60px;
   background: rgba(2, 6, 23, 0.9);
-  padding:16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
   z-index: 1000;
 }
 .nav-left {
@@ -36,17 +39,18 @@ body {
 
 
 .brand {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
 }
 
 .hamburger {
+  position: absolute;
   font-size: 26px;
   background: none;
   border: none;
   color: white;
   cursor: pointer;
-  left: 2px;
+  left: 16px;
 }
 
 .logo {
@@ -94,7 +98,7 @@ main {
 
 .section {
   min-height: auto;
-  padding: 40px 20px;
+  padding: 60px 20px;
   max-width: 900px;
   margin: auto;
   opacity: 0;
@@ -132,6 +136,7 @@ ul {
     font-size: 1.4rem;
   }
 }
+
 
 
 
