@@ -132,6 +132,21 @@ ul {
   padding-left: 20px;
 }
 
+.project-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 28px;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.15);
+}
+
 /* RESPONSIVE */
 @media (min-width: 768px) {
   .section {
@@ -142,6 +157,7 @@ ul {
     font-size: 1.4rem;
   }
 }
+
 
 
 
