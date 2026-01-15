@@ -1,36 +1,19 @@
-const hamburger = document.getElementById("hamburger");
-const sidebar = document.getElementById("sidebar");
-const links = document.querySelectorAll(".nav-link");
-const sections = document.querySelectorAll(".section");
+// Dark mode toggle
+const toggle = document.getElementById('theme-toggle');
 
-hamburger.addEventListener("click", () => {
-  sidebar.classList.toggle("open");
+toggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
 });
 
-links.forEach(link => {
-  link.addEventListener("click", () => {
-    sidebar.classList.remove("open");
-
-    links.forEach(l => l.classList.remove("active"));
-    link.classList.add("active");
-  });
-});
-
-/* Scroll animation */
+// Fade-in on scroll
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-
-      links.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href").substring(1) === entry.target.id) {
-          link.classList.add("active");
-        }
-      });
+      entry.target.classList.add('visible');
     }
   });
-}, { threshold: 0.3 });
+});
 
-sections.forEach(section => observer.observe(section));
-
+document.querySelectorAll('section').forEach(section => {
+  observer.observe(section);
+});
